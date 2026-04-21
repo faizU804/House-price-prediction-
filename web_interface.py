@@ -13,10 +13,13 @@ app = Flask(__name__,
             static_folder='static',
             template_folder='templates')
 
-# Load the trained model
-MODEL_PATH = os.path.join('output', 'best_model.pkl')
-ACCURACY_PATH = os.path.join('output', 'model_accuracy.txt')
-SELECTED_FEATURES_PATH = os.path.join('output', 'selected_features.txt')
+# Get the base directory of the script
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+
+# Load the trained model using absolute paths
+MODEL_PATH = os.path.join(BASE_DIR, 'output', 'best_model.pkl')
+ACCURACY_PATH = os.path.join(BASE_DIR, 'output', 'model_accuracy.txt')
+SELECTED_FEATURES_PATH = os.path.join(BASE_DIR, 'output', 'selected_features.txt')
 
 def load_model():
     try:
