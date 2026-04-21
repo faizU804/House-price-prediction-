@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://machine-learning-project-one.vercel.app/sitemap.xml

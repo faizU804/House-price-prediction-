@@ -4,7 +4,7 @@
 import os
 import pickle
 import pandas as pd
-from flask import Flask, render_template, request, redirect, url_for, jsonify
+from flask import Flask, render_template, request, redirect, url_for, jsonify, send_from_directory
 import numpy as np
 import traceback
 from datetime import datetime
@@ -153,6 +153,26 @@ def predict():
 @app.route('/about')
 def about():
     return render_template('about.html')
+
+@app.route('/robots.txt')
+def robots():
+    return send_from_directory(BASE_DIR, 'robots.txt')
+
+@app.route('/sitemap.xml')
+def sitemap():
+    return send_from_directory(BASE_DIR, 'sitemap.xml')
+
+@app.route('/blog')
+def blog_index():
+    return render_template('blog/index.html')
+
+@app.route('/blog/<slug>')
+def blog_post(slug):
+    # This route will look for template files in templates/blog/
+    try:
+        return render_template(f'blog/{slug}.html')
+    except Exception:
+        return redirect(url_for('blog_index'))
 
 if __name__ == '__main__':
     # Create necessary directories

@@ -1,0 +1,91 @@
+{% extends 'base.html' %}
+
+{% block title %}Melbourne Real Estate Insights & AI Forecasts | Blog{% endblock %}
+
+{% block content %}
+<section class="py-5 bg-dark text-white text-center">
+    <div class="container py-lg-4">
+        <h1 class="display-4 fw-bold">Market Intelligence Hub</h1>
+        <p class="lead opacity-75">Expert analysis of Melbourne's property cycles and AI-driven growth forecasting.</p>
+    </div>
+</section>
+
+<section class="py-5 bg-light">
+    <div class="container py-lg-5">
+        <div class="row g-4">
+            <!-- Article 1 -->
+            <div class="col-lg-4 col-md-6" data-aos="fade-up">
+                <div class="card h-100 border-0 shadow-sm overflow-hidden rounded-4">
+                    <img src="https://images.unsplash.com/photo-1449824913935-59a10b8d2000?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="card-img-top" alt="Melbourne 2026 Forecast">
+                    <div class="card-body p-4">
+                        <div class="mb-2">
+                            <span class="badge bg-primary-subtle text-primary">Market Forecast</span>
+                        </div>
+                        <h4 class="fw-bold">The Future of Melbourne Real Estate: AI Predictions for 2026</h4>
+                        <p class="text-muted small">Deep dive into the supply-demand metrics and algorithmic models predicting the next property cycle.</p>
+                        <a href="{{ url_for('blog_post', slug='melbourne-market-forecast-2026') }}" class="btn btn-link px-0 fw-bold">Read Article <i class="fas fa-arrow-right ms-2"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Future Articles Placeholders -->
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                <div class="card h-100 border-0 shadow-sm overflow-hidden rounded-4">
+                    <img src="https://images.unsplash.com/photo-1582408921715-18e7806365c1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="card-img-top" alt="Investment Suburbs">
+                    <div class="card-body p-4">
+                        <div class="mb-2">
+                            <span class="badge bg-success-subtle text-success">Investment Guide</span>
+                        </div>
+                        <h4 class="fw-bold">Top 10 High-Growth Suburbs in Melbourne for 2026</h4>
+                        <p class="text-muted small">Identifying the "Dark Horse" suburbs where AI identifies undervalued land and transport infrastructure benefits.</p>
+                        <a href="{{ url_for('blog_post', slug='top-10-investment-suburbs-melbourne') }}" class="btn btn-link px-0 fw-bold">Read Article <i class="fas fa-arrow-right ms-2"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                <div class="card h-100 border-0 shadow-sm overflow-hidden rounded-4">
+                    <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="card-img-top" alt="AI in Real Estate">
+                    <div class="card-body p-4">
+                        <div class="mb-2">
+                            <span class="badge bg-warning-subtle text-warning">AI Revolution</span>
+                        </div>
+                        <h4 class="fw-bold">How Machine Learning is Revolutionizing Property Valuations</h4>
+                        <p class="text-muted small">Understanding the death of the manual appraisal and the rise of high-velocity automated valuation models.</p>
+                        <a href="{{ url_for('blog_post', slug='ai-revolution-property-valuation') }}" class="btn btn-link px-0 fw-bold">Read Article <i class="fas fa-arrow-right ms-2"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- New Articles -->
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                <div class="card h-100 border-0 shadow-sm overflow-hidden rounded-4">
+                    <img src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="card-img-top" alt="Supply Demand">
+                    <div class="card-body p-4">
+                        <div class="mb-2">
+                            <span class="badge bg-info-subtle text-info">Economic Deep-Dive</span>
+                        </div>
+                        <h4 class="fw-bold">A Deep Dive into Melbourne's Housing Supply and Demand</h4>
+                        <p class="text-muted small">The raw numbers behind the scarcity driving property values in the 2026 market.</p>
+                        <a href="{{ url_for('blog_post', slug='melbourne-supply-demand-deep-dive') }}" class="btn btn-link px-0 fw-bold">Read Article <i class="fas fa-arrow-right ms-2"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
+                <div class="card h-100 border-0 shadow-sm overflow-hidden rounded-4">
+                    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="card-img-top" alt="Portfolio Strategy">
+                    <div class="card-body p-4">
+                        <div class="mb-2">
+                            <span class="badge bg-primary-subtle text-primary">SaaS Strategy</span>
+                        </div>
+                        <h4 class="fw-bold">Maximizing Your Real Estate Portfolio with AI-Driven Data</h4>
+                        <p class="text-muted small">How to use algorithmic optimization to build a recession-proof property portfolio.</p>
+                        <a href="{{ url_for('blog_post', slug='maximizing-real-estate-portfolio-ai') }}" class="btn btn-link px-0 fw-bold">Read Article <i class="fas fa-arrow-right ms-2"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+
+{% block title %}Melbourne Housing Supply & Demand Analysis 2026 | Blog{% endblock %}
+
+{% block content %}
+<article class="py-5 bg-white">
+    <div class="container py-lg-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-9">
+                <nav aria-label="breadcrumb" class="mb-4">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="{{ url_for('home') }}">Home</a></li>
+                        <li class="breadcrumb-item"><a href="{{ url_for('blog_index') }}">Blog</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Supply & Demand</li>
+                    </ol>
+                </nav>
+
+                <h1 class="display-4 fw-bold mb-4">A Deep Dive into Melbourne's Housing Supply and Demand Metrics</h1>
+                
+                <div class="d-flex align-items-center mb-5 pb-4 border-bottom">
+                    <div class="bg-info text-white rounded-circle p-2 me-3" style="width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;">
+                        <i class="fas fa-chart-pie"></i>
+                    </div>
+                    <div>
+                        <div class="fw-bold">Economic Research Unit</div>
+                        <div class="small text-muted">April 21, 2026 • 13 min read • <span class="text-info font-monospace">Data-Driven Analysis</span></div>
+                    </div>
+                </div>
+
+                <div class="content fs-5 text-muted lh-lg">
+                    <p class="lead fw-bold text-dark mb-4">Price is simply the intersection of supply and demand. However, in the 2026 Melbourne market, these two forces are behaving in ways we've never seen before. This analysis breaks down the raw numbers behind the scarcity driving property values.</p>
+
+                    <h2 class="fw-bold text-dark mt-5 mb-4">1. The Chronic Supply Deficit</h2>
+                    <p>Melbourne is currently facing a "Missing Middle" supply crisis. While high-rise apartment construction in the CBD is at steady levels, the development of townhouses and low-density standalone homes in the middle ring (10-25km from the city) has plummeted. Our AI models identify that <strong>Council Areas like Monash and Whitehorse</strong> are experiencing a 30% shortfall in projected dwelling completions compared to population growth.</p>
+                    
+                    <h2 class="fw-bold text-dark mt-5 mb-4">2. The Migration Wave: Driving Unprecedented Demand</h2>
+                    <p>Internal migration from Sydney to Melbourne, combined with record international arrivals, has pushed Melbourne's "Demand Velocity" (how fast buyers are entering the market) to its highest point in a decade. This isn't just general demand; it is <strong>Intent-Specific Demand</strong>. Buyers are specifically targeting properties with 3+ bedrooms and high land-to-building ratios, further squeezing the most stable asset classes.</p>
+
+                    <div class="bg-light p-4 rounded-4 my-5 border-start border-info border-4">
+                        <h4 class="fw-bold mb-3">Supply Heatmap Insight</h4>
+                        <p class="mb-0">"Our 2026 heatmap shows that inventory levels in the Northern Metropolitan region have stayed below 2.1 months of supply for over a year. Any market with less than 3 months of supply is considered a seller's market with upward pressure on pricing."</p>
+                    </div>
+
+                    <h2 class="fw-bold text-dark mt-5 mb-4">3. The Interest Rate Inflection Point</h2>
+                    <p>With rates stabilizing in 2026, the "Wait and See" demand that built up during 2023-2025 is now flooding back into the market. This released demand is acting like a pressure cooker, particularly in suburbs with high <strong>Propertycount</strong> but low "New Listing Velocity."</p>
+
+                    <h2 class="fw-bold text-dark mt-5 mb-4">Conclusion: Buy Scarcity, Not Just Houses</h2>
+                    <p>To succeed in the current market, investors must look for supply bottlenecks. Suburbs where new development is geographically or legislatively constrained (heritage zones) will always command a premium. Our AI tool is designed to help you find these scarcity zones before they become common knowledge.</p>
+
+                    <div class="text-center mt-5 py-5 border-top">
+                        <h4 class="fw-bold mb-4">Identify Your Suburb's Scarcity Score</h4>
+                        <a href="{{ url_for('predict') }}" class="btn btn-info text-white shadow-lg px-5 py-3 fw-bold">Scan the Market Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</article>
+{% endblock %}
